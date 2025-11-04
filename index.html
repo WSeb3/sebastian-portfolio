@@ -17,18 +17,16 @@
 
        body {background-color: #6ac5fe;} 
 
-      .portfolio-table {
-       margin: 0 auto;
-       max-width: 1100px;
-       margin-bottom: 1.5rem;
-       border-color: black;
-       background-color: tan;}
-
-      .portfolio-table th,
-      .portfolio-table td {
-       vertical-align: middle;
-       border-color: black;}
-
+        .grid-container {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-gap: 10px;
+         margin-bottom: 1.5rem;}
+        
+        .grid-item {
+         padding: 8px;
+         padding-bottom: .5px;
+         border: 1px solid #ccc;}
 
     </style>
 </head>
@@ -66,54 +64,32 @@
 
     <h3>Welcome to my portfolio!</h3>
 
-    <table class="table table-borderless text-center portfolio-table">
-  <tbody>
-    <tr>
-         <td class="align-middle">
-         <a href="logo.html">
-          <img src="logo design robot2.png" class="img-fluid mx-auto d-block" alt="logo" style="width:100%; height:auto;">
-         </a>
-        </td>
-        <td class="align-middle">
-         <a href="glitch.html">
-          <img src="glitch-dog3.png" class="img-fluid mx-auto d-block" alt="glitch" style="width:100%; height:auto;">
-         </a>
-        </td>
-        <td class="align-middle">
-         <a href="meme.html">
-          <img src="meme.png" class="img-fluid mx-auto d-block" alt="meme" style="width:100%; height:auto;">
-         </a>
-        </td>
-    </tr>
-      
-    <tr>
-      <td class="text-center">Logo Design</td> 
-      <td class="text-center">Glitch Art</td>
-      <td class="text-center">Meme Mashup</td>
-    </tr>
-  </tbody>
- </table>
+    <div class="grid-container">
+      <div class="grid-item">
+          <a href="logo.html"><img src="logo design robot2.png" class="img-fluid mx-auto d-block" alt="logo" style="width:100%; height:auto;"></a>
+          <p>Logo Design</p>
+      </div>
+      <div class="grid-item">
+          <a href="glitch.html"><img src="glitch-dog3.png" class="img-fluid mx-auto d-block" alt="glitch" style="width:100%; height:auto;"></a>
+          <p>Glitch Art</p>
+      </div>
+      <div class="grid-item">
+          <a href="meme.html">
+          <img src="meme.png" class="img-fluid mx-auto d-block" alt="meme" style="width:100%; height:auto;"></a>
+          <p>Meme Mashup</p>
+      </div>
+    </div>
 
-<table class="table table-borderless text-center portfolio-table">
-  <tbody> 
-   <tr>
-        <td class="align-middle">
-         <a href="3dmodel.html">
-          <img src="room.png" class="img-fluid mx-auto d-block" alt="3dmodel" style="max-width:100%; height:auto;">
-         </a>
-        </td>
-        <td class="align-middle">
-         <a href="netart.html">
-          <img src="netstart.png" class="img-fluid mx-auto d-block" alt="netart" style="max-width:100%; height:auto;">
-         </a>
-        </td>
-   </tr>
-   <tr>
-      <td class="text-center">3D Model</td>
-      <td class="text-center">net.art</td> 
-   </tr>
-  </tbody>
-</table>
+    <div class="grid-container">
+      <div class="grid-item">
+          <a href="3dmodel.html"><img src="room.png" class="img-fluid mx-auto d-block" alt="3dmodel" style="max-width:100%; height:auto;"></a>
+          <p>3D Model</p>
+      </div>
+      <div class="grid-item">
+          <a href="netart.html"><img src="netstart.png" class="img-fluid mx-auto d-block" alt="netart" style="max-width:100%; height:auto;"></a>
+          <p>net.art</p>
+      </div>
+    </div>
       
 </body>
 </html>
