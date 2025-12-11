@@ -57,8 +57,20 @@
     .iframe-container {
     display: flex;
     justify-content: center;
+    align-items: center;   
+    gap: 20px;            
     margin-bottom: 1.5rem;
-        }
+}
+
+    .iframe-container img {
+        width: 40%;          
+        margin: 0;     
+    }
+    
+    .iframe-container iframe {
+        max-width: 600px;
+        width: 100%;
+    }
 
     </style>
 </head>
@@ -104,15 +116,16 @@
 
   <h4>DIY Photoshop</h4>
 
-<img src="sc14143140.jpg" alt="Sketch" onclick="showImage(this.src)">
-  
-<div class="iframe-container">
-    <iframe src="DIYphotoshop/index.html"
-            width="600"
-            height="600"
-            frameborder="0" title="board">
-    </iframe>
-</div>
+    <div class="iframe-container">
+      <img src="sc14143140.jpg" alt="Sketch" onclick="showImage(this.src)">
+    
+      <iframe src="DIYphotoshop/index.html"
+              width="600"
+              height="600"
+              frameborder="0"
+              title="board">
+      </iframe>
+    </div>
 
     <table class="table table-bordered text-center portfolio-table">
       <tbody>
