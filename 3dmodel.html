@@ -16,19 +16,22 @@
         body {background-color: #6ac5fe;}
        
       .portfolio-table {
-       margin: 0 auto;
-       max-width: 1100px;
-       margin-bottom: 1.5rem;
-       border-color: black;}
+            margin: 0 auto;
+            width: 60%;
+            margin-bottom: 1.5rem;
+            border-color: black;
 
      .portfolio-table th,
      .portfolio-table td {
       vertical-align: middle;
       border-color: black;}
         
-        img {display: block;
-        margin: auto;
-        width: 80%;}
+        img {
+            display: block;
+            margin: auto;
+            margin-bottom: 0.5rem;
+            width: 50%;
+            cursor: pointer;}
     </style>
 </head>
 <body>
@@ -48,49 +51,63 @@
             <li class="nav-item"><a class="nav-link" href="3dmodel.html">3D</a></li>
             <li class="nav-item"><a class="nav-link" href="netart.html">net.art</a></li>
             <li class="nav-item"><a class="nav-link" href="p5js.html">p5.js</a>
+            <li class="nav-item"><a class="nav-link" href="final.html">Final</a>
           </li>
         </ul>
     </div>
     </nav>
-        
+    
+    <div class=container>    
     <h2>3D Model</h2>
-
-   <p> This is my 3D model of my old desk and room scene from memory.</p>
-        
+    <img src='room.png' class="img-fluid" alt="model" onclick="showImage(this.src)">
     <table class="table table-bordered text-center portfolio-table">
       <tbody>
           <tr>
-              <td class="align-middle">
-                <img src='room.png' class="img-fluid" alt="model">
-              </td>
+              <td class="align-middle">This is my 3D model of my old desk and room scene from memory.</td>
           </tr>
       </tbody>
     </table>
         
    <h2>3D print</h2>
-   <p> This is a print of a 3D model I found online. I printed two different sizes of the same model.</p>
+   <img src='3d print.jpg' class="img-fluid" alt="print">
      <table class="table table-bordered text-center portfolio-table">   
         <tbody> 
          <tr>
-            <td class="align-middle">
-               <img src='3d print.jpg' class="img-fluid" alt="print">
-            </td>
+            <td class="align-middle">This is a print of a 3D model I found online. I printed two different sizes of the same model.</td>
           </tr>
         </tbody>
      </table>
 
      <h2>Virtual City</h2>
-     <p> This is a virtual space I created. It is loosely based off of my own workspace. Click on the image to look at the space.</p>  
+     <a href="https://newart.city/show/messy-work-space">
+         <img src='messy-work-space.jpg' class="img-fluid" alt="space">
+     </a>
         <table class="table table-bordered text-center portfolio-table">  
          <tbody>
             <tr>   
-            <td class="align-middle">
-                <a href="https://newart.city/show/messy-work-space">
-                    <img src='messy-work-space.jpg' class="img-fluid" alt="space">
-                </a>
-            </td>
+                <td class="align-middle">This is a virtual space I created. It is loosely based off of my own workspace. Click on the image to look at the space.</td>
             </tr>
          </tbody>
         </table>
+</div>
+    
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0">
+        <img id="modalImage" class="img-fluid w-100" src="" alt="preview">
+      </div>
+    </div>
+  </div>
+</div>
+    
+<script>
+  function showImage(src) {
+      document.getElementById("modalImage").src = src;
+      var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+      modal.show();
+  }
+</script>
+    
 </body>
 </html>
