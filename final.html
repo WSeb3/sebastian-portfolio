@@ -16,62 +16,73 @@
        body {background-color: #6ac5fe;} 
        
       .portfolio-table {
-       margin: 0 auto;
-       max-width: 1100px;
-       margin-bottom: 1.5rem;
-       border-color: black;}
-
+            margin: 0 auto;
+            width: 60%;
+            margin-bottom: 1.5rem;
+            border-color: black;
+        }
      .portfolio-table th,
      .portfolio-table td {
       vertical-align: middle;
       border-color: black;}
         
-        img {display: block;
-        margin: auto;
-        width: 80%;}
+        img {
+            display: block;
+            margin: auto;
+            margin-bottom: 0.5rem;
+            width: 50%;
+            cursor: pointer;
+        }
+
+        .image-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .image-flex img {
+            width: 45%; /* 2 images per row */
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
-    
-   <h1 class="mb-3">WSebastian's Portfolio</h1>
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-3">
-      <div class="container">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-3">
+    <div class="container d-flex">
+        <span class="navbar-text text-white fw-bold">
+            WSebastian's Portfolio
+        </span>
+
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logo.html">logo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="glitch.html">Glitch</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="meme.html">Meme</a>
-          </li>
-         </li>
-          <li class="nav-item">
-            <a class="nav-link" href="3dmodel.html">3D</a>
-          </li>
-         </li>
-          <li class="nav-item">
-            <a class="nav-link" href="netart.html">net.art</a>
-          </li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="logo.html">logo</a></li>
+            <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch</a></li>
+            <li class="nav-item"><a class="nav-link" href="meme.html">Meme</a></li>
+            <li class="nav-item"><a class="nav-link" href="3dmodel.html">3D</a></li>
+            <li class="nav-item"><a class="nav-link" href="netart.html">net.art</a></li>
+            <li class="nav-item"><a class="nav-link" href="p5js.html">p5.js</a></li>
+            <li class="nav-item"><a class="nav-link" href="final.html">Final</a>
         </ul>
-    </nav>
+    </div>
+</nav>
         
     <h2>Final</h2>
+    
+    <div class="image-flex">
+        <img src="dreamfinal2.jpg" alt="door" onclick="showImage(this.src)">
+        <img src="dream2-2.jpg" alt="room" onclick="showImage(this.src)">
+        <img src="the-orb copy2-2.jpg" alt="orb" onclick="showImage(this.src)">
+        <img src="waterboat-edit.jpg" alt="boat" onclick="showImage(this.src)">
+    </div>
 
-   <p> This is my Final.</p>
-        
+    
     <table class="table table-bordered text-center portfolio-table">
       <tbody>
           <tr>
-              <td class="align-middle">
-                    <img src='dreamfinal2.jpg' class="img-fluid" alt="door">
-              </td>
+              <td class="align-middle"> This is my Final.</td>
           </tr>
       </tbody>
         </table>
