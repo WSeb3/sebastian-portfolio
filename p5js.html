@@ -41,6 +41,12 @@
         cursor: pointer;
         }
 
+    .iframe-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+        }
+
     </style>
 </head>
 <body>
@@ -67,7 +73,7 @@
 
     <h4>Self portrait</h4>
   
-    <div id="iframe-container">
+    <div class="iframe-container">
         <iframe src="ps5jportrait/index.html"
                 width="600"
                 height="600"
@@ -75,25 +81,37 @@
         </iframe>
     </div>
 
-    <p>Very cool self portrait</p>
+    <table class="table table-bordered text-center portfolio-table">
+      <tbody>
+        <tr>
+          <td class="align-middle">Very cool self portrait</td>
+        </tr>
+      </tbody>
+    </table>
 
   <h4>DIY Photoshop</h4>
 
-  <img src="sc14143140.jpg" alt="Sketch">
+<img src="sc14143140.jpg" alt="Sketch" onclick="showImage(this.src)">
   
-    <div id="iframe-container">
-        <iframe src="DIYphotoshop/index.html"
-                width="600"
-                height="600"
-                frameborder="0" title="board">
-        </iframe>
-    </div>
+<div class="iframe-container">
+    <iframe src="DIYphotoshop/index.html"
+            width="600"
+            height="600"
+            frameborder="0" title="board">
+    </iframe>
+</div>
 
-    <p>Very cool self sketch</p>
+    <table class="table table-bordered text-center portfolio-table">
+      <tbody>
+        <tr>
+          <td class="align-middle"> Created a DIY photoshop thing. On the left is my sketch using all the tools. On the right is for you to mess around with. </td>
+        </tr>
+      </tbody>
+    </table>
 
     <h4>game</h4>
   
-    <div id="iframe-container">
+   <div class="iframe-container">
         <iframe src="https://editor.p5js.org/sriya.gopalan/sketches/yz6s_z8eQ"
                 width="600"
                 height="600"
@@ -101,9 +119,15 @@
         </iframe>
     </div>
 
-    <p>game collab with syria</p>
+    <table class="table table-bordered text-center portfolio-table">
+      <tbody>
+        <tr>
+          <td class="align-middle"> game collab with syria </td>
+        </tr>
+      </tbody>
+    </table>
 
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+ <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content bg-dark">
       <div class="modal-body p-0">
